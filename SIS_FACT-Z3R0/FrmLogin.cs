@@ -14,6 +14,9 @@ namespace SIS_FACT_Z3R0
     {
         int mouseX, mouseY;
         bool mouseM;
+        UserClass userClass = new UserClass();
+        DataContext data = new DataContext();
+        FrmDashboard frm = new FrmDashboard();
         public FrmLogin()
         {
             InitializeComponent();
@@ -55,22 +58,30 @@ namespace SIS_FACT_Z3R0
 
         private void btnUnique_Click(object sender, EventArgs e)
         {
-            if ((txtUser.Text=="Admin")&&(txtPassword.Text=="1234"))
+            DataTable dt = new DataTable();
+            userClass.Username = txtUser.Text;
+            userClass.Password = txtPassword.Text;
+           dt = IniciandoSesion(userClass);
+            if (dt.Rows.Count > 0)
             {
-                string mensaje = "Saludos, " + txtUser.Text + " su accion fue completada correctamente. Puede seguir usando el sistema de Z3R0 ENTERPRISE INC.";
-                FrmSucess frm = new FrmSucess(mensaje);
-                frm.Show();
+                string Nombre;
+                Nombre = dt.Rows[0][1].ToString();
+                FrmSucess.confirmacionForm("Saludos, " + Nombre + " su accion fue completada correctamente. Puede seguir usando el sistema de Z3R0 ENTERPRISE INC.");
+                frm.ShowDialog();
             }
             else
             {
-                string mensaje = "¡Oops, ha ocurrido un error en el sistema intentelo de nuevo más tarde!";
-                FrmError frm = new FrmError(mensaje);
-                frm.Show();
+                FrmError.confirmacionForm("¡Oops, ha ocurrido un error en el sistema intentelo de nuevo más tarde!");
             }
         }
 
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        public DataTable IniciandoSesion(UserClass user)
         {
+            return data.IniciarSesion(user);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        { 
             mouseM = false;
         }
     }
