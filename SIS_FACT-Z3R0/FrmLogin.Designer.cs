@@ -61,7 +61,7 @@ namespace SIS_FACT_Z3R0
             // 
             // lblKey
             // 
-            this.lblKey.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblKey.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKey.ForeColor = System.Drawing.Color.White;
             this.lblKey.Location = new System.Drawing.Point(40, 3);
             this.lblKey.Name = "lblKey";
@@ -90,7 +90,7 @@ namespace SIS_FACT_Z3R0
             // 
             // lblKey2
             // 
-            this.lblKey2.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblKey2.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKey2.Location = new System.Drawing.Point(160, 114);
             this.lblKey2.Name = "lblKey2";
             this.lblKey2.Size = new System.Drawing.Size(120, 28);
@@ -122,7 +122,7 @@ namespace SIS_FACT_Z3R0
             // 
             // lblKey3
             // 
-            this.lblKey3.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblKey3.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKey3.Location = new System.Drawing.Point(161, 206);
             this.lblKey3.Name = "lblKey3";
             this.lblKey3.Size = new System.Drawing.Size(120, 28);
@@ -140,7 +140,7 @@ namespace SIS_FACT_Z3R0
             this.btnUnique.UseVisualStyleBackColor = false;
             this.btnUnique.Click += new System.EventHandler(this.btnUnique_Click);
             // 
-            // Form1
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,7 +152,7 @@ namespace SIS_FACT_Z3R0
             this.Controls.Add(this.lblKey2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FrmLogin";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

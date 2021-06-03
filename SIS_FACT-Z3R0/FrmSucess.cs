@@ -15,6 +15,7 @@ namespace SIS_FACT_Z3R0
             InitializeComponent();
             label1.Text = mensaje;
             btnClose.Text = "Cerrar";
+            lblMensaje.Text = "MENSAJE";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +31,11 @@ namespace SIS_FACT_Z3R0
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmSucess_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
