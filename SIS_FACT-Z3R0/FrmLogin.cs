@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SIS_FACT_Z3R0
 {
-    public partial class Form1 : Form
+    public partial class FrmLogin : Form
     {
         int mouseX, mouseY;
         bool mouseM;
-        public Form1()
+        public FrmLogin()
         {
             InitializeComponent();
             lblKey.Text = "Z3R0 ENTERPRISE INC.";
