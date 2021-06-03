@@ -63,7 +63,9 @@ namespace SIS_FACT_Z3R0
             }
             else
             {
-                MessageBox.Show("¡Contraseña o Usuario incorrecto!");
+                string mensaje = "¡Oops, ha ocurrido un error en el sistema intentelo de nuevo más tarde!";
+                FrmError frm = new FrmError(mensaje);
+                frm.Show();
             }
         }
 

@@ -34,10 +34,8 @@ namespace SIS_FACT_Z3R0
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMensaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -46,7 +44,7 @@ namespace SIS_FACT_Z3R0
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 11);
+            this.panel1.Size = new System.Drawing.Size(425, 11);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -54,7 +52,7 @@ namespace SIS_FACT_Z3R0
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 61);
+            this.label1.Location = new System.Drawing.Point(31, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(355, 88);
             this.label1.TabIndex = 2;
@@ -66,7 +64,7 @@ namespace SIS_FACT_Z3R0
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(129)))), ((int)(((byte)(66)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(74, 185);
+            this.btnClose.Location = new System.Drawing.Point(112, 185);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(191, 40);
             this.btnClose.TabIndex = 6;
@@ -82,20 +80,11 @@ namespace SIS_FACT_Z3R0
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SIS_FACT_Z3R0.Properties.Resources.close;
-            this.pictureBox1.Location = new System.Drawing.Point(363, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 37);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblMensaje
             // 
             this.lblMensaje.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMensaje.ForeColor = System.Drawing.Color.White;
-            this.lblMensaje.Location = new System.Drawing.Point(74, 27);
+            this.lblMensaje.Location = new System.Drawing.Point(112, 27);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(191, 34);
             this.lblMensaje.TabIndex = 9;
@@ -106,10 +95,9 @@ namespace SIS_FACT_Z3R0
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(355, 237);
+            this.ClientSize = new System.Drawing.Size(425, 250);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -119,7 +107,6 @@ namespace SIS_FACT_Z3R0
             this.Text = "FrmSucess";
             this.Load += new System.EventHandler(this.FrmSucess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,7 +117,6 @@ namespace SIS_FACT_Z3R0
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblMensaje;
     }
 }
