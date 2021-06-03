@@ -57,7 +57,9 @@ namespace SIS_FACT_Z3R0
         {
             if ((txtUser.Text=="Admin")&&(txtPassword.Text=="1234"))
             {
-                MessageBox.Show("Bienvenido: " + txtUser.Text + " a" + " Z3r0 Enterprise Inc.");
+                string mensaje = "Bienvenido: " + txtUser.Text + " a" + " Z3r0 Enterprise Inc.";
+                FrmSucess frm = new FrmSucess(mensaje);
+                frm.Show();
             }
             else
             {

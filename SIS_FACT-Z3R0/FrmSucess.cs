@@ -10,9 +10,26 @@ namespace SIS_FACT_Z3R0
 {
     public partial class FrmSucess : Form
     {
-        public FrmSucess()
+        public FrmSucess(string mensaje)
         {
             InitializeComponent();
+            label1.Text = mensaje;
+            btnClose.Text = "Cerrar";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
