@@ -51,6 +51,11 @@ namespace SIS_FACT_Z3R0
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseM = false;

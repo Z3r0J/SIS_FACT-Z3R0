@@ -39,6 +39,7 @@ namespace SIS_FACT_Z3R0
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblKey3 = new System.Windows.Forms.Label();
             this.btnUnique = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +54,7 @@ namespace SIS_FACT_Z3R0
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 42);
+            this.panel1.Size = new System.Drawing.Size(445, 42);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -91,9 +92,9 @@ namespace SIS_FACT_Z3R0
             // lblKey2
             // 
             this.lblKey2.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKey2.Location = new System.Drawing.Point(160, 114);
+            this.lblKey2.Location = new System.Drawing.Point(210, 105);
             this.lblKey2.Name = "lblKey2";
-            this.lblKey2.Size = new System.Drawing.Size(120, 28);
+            this.lblKey2.Size = new System.Drawing.Size(44, 28);
             this.lblKey2.TabIndex = 1;
             // 
             // txtUser
@@ -101,7 +102,7 @@ namespace SIS_FACT_Z3R0
             this.txtUser.BackColor = System.Drawing.Color.Black;
             this.txtUser.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUser.ForeColor = System.Drawing.Color.White;
-            this.txtUser.Location = new System.Drawing.Point(120, 149);
+            this.txtUser.Location = new System.Drawing.Point(132, 136);
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(187, 36);
@@ -113,7 +114,7 @@ namespace SIS_FACT_Z3R0
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(121, 241);
+            this.txtPassword.Location = new System.Drawing.Point(133, 228);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -123,28 +124,42 @@ namespace SIS_FACT_Z3R0
             // lblKey3
             // 
             this.lblKey3.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKey3.Location = new System.Drawing.Point(161, 206);
+            this.lblKey3.Location = new System.Drawing.Point(191, 197);
             this.lblKey3.Name = "lblKey3";
-            this.lblKey3.Size = new System.Drawing.Size(120, 28);
+            this.lblKey3.Size = new System.Drawing.Size(81, 28);
             this.lblKey3.TabIndex = 3;
             // 
             // btnUnique
             // 
-            this.btnUnique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(157)))), ((int)(((byte)(246)))));
+            this.btnUnique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(180)))), ((int)(((byte)(127)))));
             this.btnUnique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnique.ForeColor = System.Drawing.Color.White;
-            this.btnUnique.Location = new System.Drawing.Point(155, 298);
+            this.btnUnique.Location = new System.Drawing.Point(167, 285);
             this.btnUnique.Name = "btnUnique";
             this.btnUnique.Size = new System.Drawing.Size(120, 40);
             this.btnUnique.TabIndex = 5;
             this.btnUnique.UseVisualStyleBackColor = false;
             this.btnUnique.Click += new System.EventHandler(this.btnUnique_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(80, 359);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(291, 39);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Haz Click, si olvidaste tu contraseña";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 410);
+            this.ClientSize = new System.Drawing.Size(445, 410);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUnique);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblKey3);
@@ -174,6 +189,7 @@ namespace SIS_FACT_Z3R0
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblKey3;
         private System.Windows.Forms.Button btnUnique;
+        private System.Windows.Forms.Button button1;
     }
 }
 
