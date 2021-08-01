@@ -17,6 +17,7 @@ namespace SIS_FACT_Z3R0
         UserClass userClass = new UserClass();
         DataContext data = new DataContext();
         FrmDashboard frm = new FrmDashboard();
+        public static string name,apellido;
         public FrmLogin()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace SIS_FACT_Z3R0
             lblKey2.Text = "User: ";
             lblKey3.Text = "Password: ";
             btnUnique.Text = "Entrar";
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,15 +66,22 @@ namespace SIS_FACT_Z3R0
            dt = IniciandoSesion(userClass);
             if (dt.Rows.Count > 0)
             {
-                string Nombre;
-                Nombre = dt.Rows[0][1].ToString();
-                FrmSucess.confirmacionForm("Saludos, " + Nombre + " su accion fue completada correctamente. Puede seguir usando el sistema de Z3R0 ENTERPRISE INC.");
+               
+                name = dt.Rows[0][1].ToString();
+                apellido = dt.Rows[0][2].ToString();
+                FrmSucess.confirmacionForm("Saludos, " + name + " su accion fue completada correctamente. Puede seguir usando el sistema de Z3R0 ENTERPRISE INC.");
                 frm.ShowDialog();
             }
             else
             {
                 FrmError.confirmacionForm("¡Oops, ha ocurrido un error en el sistema intentelo de nuevo más tarde!");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmRecuperarPass frm = new FrmRecuperarPass();
+            frm.Show();
         }
 
         public DataTable IniciandoSesion(UserClass user)

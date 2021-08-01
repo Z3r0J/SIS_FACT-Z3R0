@@ -61,6 +61,7 @@ namespace SIS_FACT_Z3R0
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(129)))), ((int)(((byte)(66)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(118, 198);
             this.btnClose.Name = "btnClose";
@@ -79,6 +80,7 @@ namespace SIS_FACT_Z3R0
             this.label1.Size = new System.Drawing.Size(401, 88);
             this.label1.TabIndex = 10;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmError
             // 
