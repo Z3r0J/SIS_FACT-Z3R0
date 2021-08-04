@@ -7,18 +7,18 @@ using System.Windows.Forms;
 
 namespace SIS_FACT_Z3R0
 {
-   class DataContext
+    class DataContext
     {
         SqlConnection connection = new SqlConnection(
-new SqlConnectionStringBuilder()
-{
-DataSource = "DESKTOP-PM985H2\\JEANCREYES",
-InitialCatalog = "SIS_FACT_Z3R0",
-UserID = "sa",
-Password = "new",
-IntegratedSecurity = true
-}.ConnectionString
-);
+        new SqlConnectionStringBuilder()
+        {
+            DataSource = "DESKTOP-PM985H2\\JEANCREYES",
+            InitialCatalog = "SIS_FACT_Z3R0",
+            UserID = "sa",
+            Password = "new",
+            IntegratedSecurity = true
+        }.ConnectionString
+        );
         public DataTable IniciarSesion(UserClass user)
         {
             SqlCommand cmd = new SqlCommand("SP_LOGIN", connection);
@@ -39,14 +39,14 @@ IntegratedSecurity = true
             connection.Open();
             cmd.Parameters.AddWithValue("@Usuario", UserRequerido);
             cmd.Parameters.AddWithValue("@Mail", UserRequerido);
-            cmd.Parameters.AddWithValue("@Password",PasswordNuevo);
+            cmd.Parameters.AddWithValue("@Password", PasswordNuevo);
             cmd.ExecuteNonQuery();
             connection.Close();
 
         }
         public string RecuperarContraseña(string UserRequerido)
         {
-           SqlCommand cmd = new SqlCommand("SP_RECOVERPASS", connection);
+            SqlCommand cmd = new SqlCommand("SP_RECOVERPASS", connection);
             cmd.CommandType = CommandType.StoredProcedure;
             connection.Open();
             cmd.Parameters.AddWithValue("@Usuario", UserRequerido);
@@ -78,8 +78,8 @@ IntegratedSecurity = true
                    "<b> Saludos!,</b>" +
                    "</font>" +
                    "<br><br><font color='#299187' size=3><b>" +
-                   userName+ " usted realizó una solicitud para recuperar su contraseña. La misma se le generara automaticamente y de manera aleatoria." +
-                   "<br><br> Contraseña: " + Password+ "" +
+                   userName + " usted realizó una solicitud para recuperar su contraseña. La misma se le generara automaticamente y de manera aleatoria." +
+                   "<br><br> Contraseña: " + Password + "" +
                    "<br>" +
                    "<br>" +
                    "Desde que inicie en el sistema debe de colocar su nueva contraseña." +
@@ -88,7 +88,7 @@ IntegratedSecurity = true
                    "</p>" +
                    "<footer>" +
                    "<font color='#ccc'><i> © " +
-                   anio+
+                   anio +
                 " Z3R0 COMPANY BY Randy Daniel Baldayaque and Jean Carlos Reyes" +
                 "</font></i>" +
                    "</footer>" +
@@ -105,7 +105,7 @@ IntegratedSecurity = true
                 connection.Close();
 
             }
-           else
+            else
             {
                 return "Lo sentimos, no existe una cuenta con este usuario o email.";
                 connection.Close();
@@ -113,5 +113,27 @@ IntegratedSecurity = true
 
 
         }
+        public DataTable BuscarClientes(ClassCliets Clientes)
+        {
+            DataTable TablaClientes = new DataTable();
+
+            SqlCommand cmd = new SqlCommand("SP_BuscarClientes", connection);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            connection.Open();
+
+            cmd.Parameters.AddWithValue("@SEARCH", Clientes.Buscar);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(TablaClientes);
+
+            connection.Close();
+
+            return TablaClientes;
+        }
+
+             
     }
 }
