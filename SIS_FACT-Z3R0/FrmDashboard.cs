@@ -145,5 +145,15 @@ namespace SIS_FACT_Z3R0
         {
 
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            SeleccionDeBoton((Button)sender);
+            if (btnselection)
+            {
+                SiguiendoBoton((Button)sender);
+                AbrirFormularioEnWrapper(new FrmClientes());
+            }
+        }
     }
 }

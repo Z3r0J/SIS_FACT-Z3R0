@@ -134,6 +134,42 @@ namespace SIS_FACT_Z3R0
             return TablaClientes;
         }
 
-             
+        public void InsertarClientes(ClassCliets Clientes)
+        {
+            SqlCommand cmd = new SqlCommand("SP_InsertarClientes",connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            connection.Open();
+            cmd.Parameters.AddWithValue("@Nombre",Clientes.Name);
+            cmd.Parameters.AddWithValue("@Apellido", Clientes.LastName);
+            cmd.Parameters.AddWithValue("@Cedula", Clientes.Documents);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void EliminarClientes(int id)
+        {
+            SqlCommand cmd = new SqlCommand("SP_EliminarClientes", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            connection.Open();
+
+            cmd.Parameters.AddWithValue("@ClientsId", id);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+        public void EditarClientes(ClassCliets Clientes)
+        {
+            SqlCommand cmd = new SqlCommand("SP_EditarClientes",connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            connection.Open();
+            cmd.Parameters.AddWithValue("@ClientsId", Clientes.ID);
+            cmd.Parameters.AddWithValue("@Nombre", Clientes.Name);
+            cmd.Parameters.AddWithValue("@Apellido", Clientes.LastName);
+            cmd.Parameters.AddWithValue("@Documents", Clientes.Documents);
+            cmd.Parameters.AddWithValue("@FechaInicio", Clientes.DateOfAdmission);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+
+
     }
 }
