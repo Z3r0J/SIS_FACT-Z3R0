@@ -155,6 +155,7 @@ namespace SIS_FACT_Z3R0
             this.btnClientes.TabIndex = 10;
             this.btnClientes.Text = "CLIENTES";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnTrabajadores
             // 

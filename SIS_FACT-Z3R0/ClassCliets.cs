@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SIS_FACT_Z3R0
 {
-    class ClassCliets
+    public class ClassCliets
     {
         public string Buscar { get; set; }
         public int ID { get; set; }
@@ -12,5 +12,6 @@ namespace SIS_FACT_Z3R0
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Documents { get; set; }
+        public DateTime DateOfAdmission { get; set; }
     }
 }
