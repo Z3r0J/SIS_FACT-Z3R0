@@ -16,6 +16,9 @@ namespace SIS_FACT_Z3R0
         public FrmRecuperarPass()
         {
             InitializeComponent();
+            this.Ayuda.SetToolTip(this.textBox1, "Escribe el correo para la verificacion.");
+            this.Ayuda.SetToolTip(this.button1, "Has click para enviar el restablecimiento.");
+
         }
 
         private void FrmRecuperarPass_Load(object sender, EventArgs e)

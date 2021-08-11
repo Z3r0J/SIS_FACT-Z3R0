@@ -25,7 +25,10 @@ namespace SIS_FACT_Z3R0
             lblKey2.Text = "User: ";
             lblKey3.Text = "Password: ";
             btnUnique.Text = "Entrar";
-            
+            this.Ayuda.SetToolTip(this.btnUnique, "Has click para entrar.");
+            this.Ayuda.SetToolTip(this.lblKey2, "Escribe tu usuario.");
+            this.Ayuda.SetToolTip(this.lblKey3, "Escribe tu contraseña.");
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

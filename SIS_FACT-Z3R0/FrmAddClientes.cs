@@ -16,6 +16,11 @@ namespace SIS_FACT_Z3R0
         public FrmAddClientes()
         {
             InitializeComponent();
+            this.TipAyuda.SetToolTip(this.textBox3, "Ingresa tu codigo.");
+            this.TipAyuda.SetToolTip(this.txtNombre, "Escribe tus dos nombre. En caso de tener solo uno, escribelo.");
+            this.TipAyuda.SetToolTip(this.txtApellido, "Escribe tus dos apellidos. En caso de tener solo uno, escribelo. ");
+            this.TipAyuda.SetToolTip(this.txtCedula, "Ingresa tu numero cedula sin espacios ni guiones.");
+            this.TipAyuda.SetToolTip(this.dtFecha, "Esta es la fecha actual.");
         }
 
         private void button1_Click(object sender, EventArgs e)
