@@ -18,7 +18,7 @@ namespace SIS_FACT_Z3R0
             label1.Text = mensaje;
             lblMensaje.Text = "MENSAJE";
             btnClose.Text = "Cerrar";
-            this.Ayuda.SetToolTip(this.btnClose, "Haz click para cerrar.");
+            this.Ayuda.SetToolTip(this.btnClose, "Has click para cerrar ");
         }
 
         private void FrmError_Load(object sender, EventArgs e)

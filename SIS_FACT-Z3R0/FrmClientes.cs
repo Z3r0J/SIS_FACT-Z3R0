@@ -14,8 +14,8 @@ namespace SIS_FACT_Z3R0
         public FrmClientes()
         {
             InitializeComponent();
-            this.Ayuda.SetToolTip(this.button1, "Pulsa para añadir un cliente.");
-            this.Ayuda.SetToolTip(this.textBox1, "Escribe para realizar una busqueda.");
+            this.toolTip1.SetToolTip(this.button1, "Has click para añadir un nuevo cliente ");
+            this.toolTip1.SetToolTip(this.textBox1, "Escribe la busqueda que deseas realizar ");
 
         }
 

@@ -15,6 +15,15 @@ namespace SIS_FACT_Z3R0
         public FrmDashboard()
         {
             InitializeComponent();
+            this.Ayuda.SetToolTip(this.btnhome, "Has click para ir a la ventana principal ");
+            this.Ayuda.SetToolTip(this.btnProductos, "Has click para ir a seccion de producto ");
+            this.Ayuda.SetToolTip(this.btnVentas, "Has click para ir a seccion de ventas ");
+            this.Ayuda.SetToolTip(this.btnCompras, "Has click para ir a seccion de compras ");
+            this.Ayuda.SetToolTip(this.btnTrabajadores, "Has click para ir a seccion de trabajadores ");
+            this.Ayuda.SetToolTip(this.btnClientes, "Has click para ir a seccion de clientes ");
+            this.Ayuda.SetToolTip(this.btnProveedores, "Has click para ir a seccion de p ");
+            this.Ayuda.SetToolTip(this.btnGanancias, "Has click para ir a seccion de ganancias ");
+
         }
         string weekstr = "";
 

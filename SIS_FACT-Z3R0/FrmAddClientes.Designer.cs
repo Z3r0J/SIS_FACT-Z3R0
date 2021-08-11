@@ -43,7 +43,7 @@ namespace SIS_FACT_Z3R0
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TipAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.Ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -222,6 +222,6 @@ namespace SIS_FACT_Z3R0
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ToolTip TipAyuda;
+        private System.Windows.Forms.ToolTip Ayuda;
     }
 }

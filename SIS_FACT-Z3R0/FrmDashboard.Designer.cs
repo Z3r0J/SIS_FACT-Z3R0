@@ -50,6 +50,7 @@ namespace SIS_FACT_Z3R0
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Wrapper = new System.Windows.Forms.Panel();
+            this.Ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,17 +76,19 @@ namespace SIS_FACT_Z3R0
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnhome);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 739);
+            this.panel1.Size = new System.Drawing.Size(255, 985);
             this.panel1.TabIndex = 0;
             // 
             // pbFlecha
             // 
             this.pbFlecha.BackColor = System.Drawing.Color.Transparent;
             this.pbFlecha.Image = global::SIS_FACT_Z3R0.Properties.Resources.left_arrow_1_;
-            this.pbFlecha.Location = new System.Drawing.Point(185, 279);
+            this.pbFlecha.Location = new System.Drawing.Point(211, 372);
+            this.pbFlecha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbFlecha.Name = "pbFlecha";
-            this.pbFlecha.Size = new System.Drawing.Size(53, 51);
+            this.pbFlecha.Size = new System.Drawing.Size(61, 68);
             this.pbFlecha.TabIndex = 0;
             this.pbFlecha.TabStop = false;
             // 
@@ -93,9 +96,9 @@ namespace SIS_FACT_Z3R0
             // 
             this.LblHora.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblHora.ForeColor = System.Drawing.Color.White;
-            this.LblHora.Location = new System.Drawing.Point(15, 228);
+            this.LblHora.Location = new System.Drawing.Point(17, 304);
             this.LblHora.Name = "LblHora";
-            this.LblHora.Size = new System.Drawing.Size(192, 32);
+            this.LblHora.Size = new System.Drawing.Size(219, 43);
             this.LblHora.TabIndex = 13;
             this.LblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -111,9 +114,10 @@ namespace SIS_FACT_Z3R0
             this.btnGanancias.ForeColor = System.Drawing.Color.White;
             this.btnGanancias.Image = ((System.Drawing.Image)(resources.GetObject("btnGanancias.Image")));
             this.btnGanancias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGanancias.Location = new System.Drawing.Point(9, 612);
+            this.btnGanancias.Location = new System.Drawing.Point(10, 816);
+            this.btnGanancias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGanancias.Name = "btnGanancias";
-            this.btnGanancias.Size = new System.Drawing.Size(214, 40);
+            this.btnGanancias.Size = new System.Drawing.Size(245, 53);
             this.btnGanancias.TabIndex = 12;
             this.btnGanancias.Text = "GANANCIAS";
             this.btnGanancias.UseVisualStyleBackColor = false;
@@ -130,9 +134,10 @@ namespace SIS_FACT_Z3R0
             this.btnProveedores.ForeColor = System.Drawing.Color.White;
             this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Location = new System.Drawing.Point(9, 566);
+            this.btnProveedores.Location = new System.Drawing.Point(10, 755);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(214, 40);
+            this.btnProveedores.Size = new System.Drawing.Size(245, 53);
             this.btnProveedores.TabIndex = 11;
             this.btnProveedores.Text = "PROVEEDORES";
             this.btnProveedores.UseVisualStyleBackColor = false;
@@ -149,9 +154,10 @@ namespace SIS_FACT_Z3R0
             this.btnClientes.ForeColor = System.Drawing.Color.White;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(9, 520);
+            this.btnClientes.Location = new System.Drawing.Point(10, 693);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(214, 40);
+            this.btnClientes.Size = new System.Drawing.Size(245, 53);
             this.btnClientes.TabIndex = 10;
             this.btnClientes.Text = "CLIENTES";
             this.btnClientes.UseVisualStyleBackColor = false;
@@ -169,9 +175,10 @@ namespace SIS_FACT_Z3R0
             this.btnTrabajadores.ForeColor = System.Drawing.Color.White;
             this.btnTrabajadores.Image = ((System.Drawing.Image)(resources.GetObject("btnTrabajadores.Image")));
             this.btnTrabajadores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrabajadores.Location = new System.Drawing.Point(9, 474);
+            this.btnTrabajadores.Location = new System.Drawing.Point(10, 632);
+            this.btnTrabajadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTrabajadores.Name = "btnTrabajadores";
-            this.btnTrabajadores.Size = new System.Drawing.Size(214, 40);
+            this.btnTrabajadores.Size = new System.Drawing.Size(245, 53);
             this.btnTrabajadores.TabIndex = 9;
             this.btnTrabajadores.Text = "TRABAJADORES";
             this.btnTrabajadores.UseVisualStyleBackColor = false;
@@ -188,9 +195,10 @@ namespace SIS_FACT_Z3R0
             this.btnCompras.ForeColor = System.Drawing.Color.White;
             this.btnCompras.Image = global::SIS_FACT_Z3R0.Properties.Resources.shopping;
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(9, 428);
+            this.btnCompras.Location = new System.Drawing.Point(10, 571);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(214, 40);
+            this.btnCompras.Size = new System.Drawing.Size(245, 53);
             this.btnCompras.TabIndex = 8;
             this.btnCompras.Text = "COMPRAS";
             this.btnCompras.UseVisualStyleBackColor = false;
@@ -208,9 +216,10 @@ namespace SIS_FACT_Z3R0
             this.btnVentas.ForeColor = System.Drawing.Color.White;
             this.btnVentas.Image = global::SIS_FACT_Z3R0.Properties.Resources.invoice;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(9, 382);
+            this.btnVentas.Location = new System.Drawing.Point(10, 509);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(214, 40);
+            this.btnVentas.Size = new System.Drawing.Size(245, 53);
             this.btnVentas.TabIndex = 7;
             this.btnVentas.Text = "VENTAS";
             this.btnVentas.UseVisualStyleBackColor = false;
@@ -228,9 +237,10 @@ namespace SIS_FACT_Z3R0
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Image = global::SIS_FACT_Z3R0.Properties.Resources.product;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(9, 336);
+            this.btnProductos.Location = new System.Drawing.Point(10, 448);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(214, 40);
+            this.btnProductos.Size = new System.Drawing.Size(245, 53);
             this.btnProductos.TabIndex = 6;
             this.btnProductos.Text = "PRODUCTOS";
             this.btnProductos.UseVisualStyleBackColor = false;
@@ -241,9 +251,9 @@ namespace SIS_FACT_Z3R0
             this.lblname.BackColor = System.Drawing.Color.Transparent;
             this.lblname.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblname.ForeColor = System.Drawing.Color.White;
-            this.lblname.Location = new System.Drawing.Point(15, 200);
+            this.lblname.Location = new System.Drawing.Point(17, 267);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(192, 28);
+            this.lblname.Size = new System.Drawing.Size(219, 37);
             this.lblname.TabIndex = 5;
             this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -252,9 +262,9 @@ namespace SIS_FACT_Z3R0
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(15, 24);
+            this.label2.Location = new System.Drawing.Point(17, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 28);
+            this.label2.Size = new System.Drawing.Size(219, 37);
             this.label2.TabIndex = 4;
             this.label2.Text = "________________________________________________";
             // 
@@ -263,9 +273,9 @@ namespace SIS_FACT_Z3R0
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 251);
+            this.label1.Location = new System.Drawing.Point(17, 335);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 36);
+            this.label1.Size = new System.Drawing.Size(219, 48);
             this.label1.TabIndex = 3;
             this.label1.Text = "________________________________________________";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,9 +283,10 @@ namespace SIS_FACT_Z3R0
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 84);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(152, 179);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -292,9 +303,10 @@ namespace SIS_FACT_Z3R0
             this.btnhome.ForeColor = System.Drawing.Color.White;
             this.btnhome.Image = ((System.Drawing.Image)(resources.GetObject("btnhome.Image")));
             this.btnhome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnhome.Location = new System.Drawing.Point(9, 290);
+            this.btnhome.Location = new System.Drawing.Point(10, 387);
+            this.btnhome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnhome.Name = "btnhome";
-            this.btnhome.Size = new System.Drawing.Size(214, 40);
+            this.btnhome.Size = new System.Drawing.Size(245, 53);
             this.btnhome.TabIndex = 0;
             this.btnhome.Text = "PRINCIPAL";
             this.btnhome.UseVisualStyleBackColor = false;
@@ -304,17 +316,19 @@ namespace SIS_FACT_Z3R0
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(180)))), ((int)(((byte)(127)))));
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(221, 0);
+            this.panel2.Location = new System.Drawing.Point(253, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1074, 45);
+            this.panel2.Size = new System.Drawing.Size(1227, 60);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SIS_FACT_Z3R0.Properties.Resources.close;
-            this.pictureBox2.Location = new System.Drawing.Point(1025, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(1171, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 39);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 52);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -326,21 +340,23 @@ namespace SIS_FACT_Z3R0
             // Wrapper
             // 
             this.Wrapper.BackColor = System.Drawing.Color.White;
-            this.Wrapper.Location = new System.Drawing.Point(221, 45);
+            this.Wrapper.Location = new System.Drawing.Point(253, 60);
+            this.Wrapper.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(1074, 694);
+            this.Wrapper.Size = new System.Drawing.Size(1227, 925);
             this.Wrapper.TabIndex = 2;
             this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // FrmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 737);
+            this.ClientSize = new System.Drawing.Size(1475, 983);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmDashboard";
             this.Text = "FrmDashboard";
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
@@ -374,5 +390,6 @@ namespace SIS_FACT_Z3R0
         public System.Windows.Forms.Button btnProductos;
         public System.Windows.Forms.Panel Wrapper;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip Ayuda;
     }
 }
