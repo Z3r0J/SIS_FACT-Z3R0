@@ -126,6 +126,7 @@ namespace SIS_FACT_Z3R0
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(229, 27);
             this.txtNombre.TabIndex = 7;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // txtApellido
             // 
@@ -134,6 +135,7 @@ namespace SIS_FACT_Z3R0
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(219, 27);
             this.txtApellido.TabIndex = 8;
+            this.txtApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtApellido_KeyDown);
             // 
             // textBox3
             // 
@@ -143,6 +145,7 @@ namespace SIS_FACT_Z3R0
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(114, 27);
             this.textBox3.TabIndex = 9;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // button1
             // 

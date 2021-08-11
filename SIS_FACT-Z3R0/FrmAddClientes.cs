@@ -114,5 +114,29 @@ namespace SIS_FACT_Z3R0
         {
             Close();
         }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtNombre.Focus();
+            }
+        }
+
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtApellido.Focus();
+            }
+        }
+
+        private void txtApellido_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCedula.Focus();
+            }
+        }
     }
 }

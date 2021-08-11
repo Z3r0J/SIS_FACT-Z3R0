@@ -89,6 +89,14 @@ namespace SIS_FACT_Z3R0
             frm.Show();
         }
 
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
         public DataTable IniciandoSesion(UserClass user)
         {
             return data.IniciarSesion(user);

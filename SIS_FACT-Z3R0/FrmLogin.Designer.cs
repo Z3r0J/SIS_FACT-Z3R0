@@ -114,6 +114,7 @@ namespace SIS_FACT_Z3R0
             this.txtUser.Size = new System.Drawing.Size(213, 47);
             this.txtUser.TabIndex = 2;
             this.txtUser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPassword
             // 
