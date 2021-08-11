@@ -54,5 +54,10 @@ namespace SIS_FACT_Z3R0
         {
             return Context.RecuperarContraseña(Usuario_Email);
         }
+
+        private void FrmRecuperarPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacion.CerrarConF10NoF4(e);
+        }
     }
 }
