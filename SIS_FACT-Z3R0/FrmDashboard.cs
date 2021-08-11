@@ -164,48 +164,5 @@ namespace SIS_FACT_Z3R0
                 AbrirFormularioEnWrapper(new FrmClientes());
             }
         }
-
-        private void FrmDashboard_KeyDown(object sender, KeyEventArgs e)
-        {
-            Validacion.CerrarConF10NoF4(e);
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            timer2.Interval = 100;
-
-            int tp;
-
-            tp = Convert.ToInt32(lblTiempo.Text);
-            tp += 1;
-            lblTiempo.Text = tp.ToString();
-
-            if (tp == 300000)
-            {
-                FrmError.confirmacionForm("TIEMPO DE INACTIVIDAD AGOTADO... VUELVA ABRIR LA APLICACION YA QUE ES POR SU SEGURIDAD.");
-                Application.Exit();
-
-            }
-        }
-
-        private void FrmDashboard_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblTiempo.Text = "0";
-        }
-
-        private void Wrapper_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblTiempo.Text = "0";
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblTiempo.Text = "0";
-        }
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblTiempo.Text = "0";
-        }
     }
 }

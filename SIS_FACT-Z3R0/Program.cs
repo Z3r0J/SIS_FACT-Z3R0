@@ -17,7 +17,7 @@ namespace SIS_FACT_Z3R0
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmClientes());
         }
     }
 }

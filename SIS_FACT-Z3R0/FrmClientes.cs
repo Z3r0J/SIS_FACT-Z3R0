@@ -104,10 +104,5 @@ namespace SIS_FACT_Z3R0
             MostrarClientes("");
 
         }
-
-        private void FrmClientes_KeyDown(object sender, KeyEventArgs e)
-        {
-            Validacion.CerrarConF10NoF4(e);
-        }
     }
 }
