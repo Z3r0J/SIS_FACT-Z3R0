@@ -118,6 +118,7 @@ namespace SIS_FACT_Z3R0
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(162, 27);
             this.txtCedula.TabIndex = 6;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // txtNombre
             // 
@@ -127,6 +128,7 @@ namespace SIS_FACT_Z3R0
             this.txtNombre.Size = new System.Drawing.Size(229, 27);
             this.txtNombre.TabIndex = 7;
             this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
@@ -136,6 +138,7 @@ namespace SIS_FACT_Z3R0
             this.txtApellido.Size = new System.Drawing.Size(219, 27);
             this.txtApellido.TabIndex = 8;
             this.txtApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtApellido_KeyDown);
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // textBox3
             // 
@@ -146,6 +149,7 @@ namespace SIS_FACT_Z3R0
             this.textBox3.Size = new System.Drawing.Size(114, 27);
             this.textBox3.TabIndex = 9;
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // button1
             // 
