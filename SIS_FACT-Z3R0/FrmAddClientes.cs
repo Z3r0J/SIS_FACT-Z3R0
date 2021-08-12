@@ -143,6 +143,10 @@ namespace SIS_FACT_Z3R0
 
         private void txtApellido_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCedula.Focus();
+            }
 
         }
 
@@ -185,6 +189,11 @@ namespace SIS_FACT_Z3R0
         private void txtNombre_Validated(object sender, EventArgs e)
         {
             button1.Enabled = true;
+        }
+
+        private void FrmAddClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

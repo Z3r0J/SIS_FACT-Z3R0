@@ -107,7 +107,7 @@ namespace SIS_FACT_Z3R0
             this.dtFecha.Location = new System.Drawing.Point(156, 314);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(107, 23);
-            this.dtFecha.TabIndex = 5;
+            this.dtFecha.TabIndex = 4;
             // 
             // txtCedula
             // 
@@ -115,7 +115,7 @@ namespace SIS_FACT_Z3R0
             this.txtCedula.Mask = "000-0000000-0";
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(142, 23);
-            this.txtCedula.TabIndex = 6;
+            this.txtCedula.TabIndex = 3;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // txtNombre
@@ -123,7 +123,7 @@ namespace SIS_FACT_Z3R0
             this.txtNombre.Location = new System.Drawing.Point(115, 99);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(201, 23);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
@@ -134,7 +134,7 @@ namespace SIS_FACT_Z3R0
             this.txtApellido.Location = new System.Drawing.Point(124, 177);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(192, 23);
-            this.txtApellido.TabIndex = 8;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtApellido_KeyDown);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -154,7 +154,7 @@ namespace SIS_FACT_Z3R0
             this.button1.Location = new System.Drawing.Point(9, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 37);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 5;
             this.button1.Text = "ACEPTAR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -165,7 +165,7 @@ namespace SIS_FACT_Z3R0
             this.button2.Location = new System.Drawing.Point(353, 364);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 37);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 6;
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -203,6 +203,7 @@ namespace SIS_FACT_Z3R0
             this.KeyPreview = true;
             this.Name = "FrmAddClientes";
             this.Text = "FrmAddClientes";
+            this.Load += new System.EventHandler(this.FrmAddClientes_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAddClientes_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
