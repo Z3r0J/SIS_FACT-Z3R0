@@ -12,9 +12,20 @@ namespace SIS_FACT_Z3R0
     {
 
         bool btnselection=false;
+        int mouseX, mouseY;
+        bool mouseM;
         public FrmDashboard()
         {
             InitializeComponent();
+            this.Ayuda.SetToolTip(this.btnhome, "Has click para ir a la ventana principal ");
+            this.Ayuda.SetToolTip(this.btnProductos, "Has click para ir a seccion de producto ");
+            this.Ayuda.SetToolTip(this.btnVentas, "Has click para ir a seccion de ventas ");
+            this.Ayuda.SetToolTip(this.btnCompras, "Has click para ir a seccion de compras ");
+            this.Ayuda.SetToolTip(this.btnTrabajadores, "Has click para ir a seccion de trabajadores ");
+            this.Ayuda.SetToolTip(this.btnClientes, "Has click para ir a seccion de clientes ");
+            this.Ayuda.SetToolTip(this.btnProveedores, "Has click para ir a seccion de p ");
+            this.Ayuda.SetToolTip(this.btnGanancias, "Has click para ir a seccion de ganancias ");
+
         }
         string weekstr = "";
 
@@ -154,6 +165,80 @@ namespace SIS_FACT_Z3R0
                 SiguiendoBoton((Button)sender);
                 AbrirFormularioEnWrapper(new FrmClientes());
             }
+        }
+
+        private void FrmDashboard_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacion.CerrarConF10NoF4(e);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Interval = 100;
+
+            int tp;
+
+            tp = Convert.ToInt32(lblTiempo.Text);
+            tp += 1;
+            lblTiempo.Text = tp.ToString();
+
+            if (tp == 300000)
+            {
+                FrmError.confirmacionForm("TIEMPO DE INACTIVIDAD AGOTADO... VUELVA ABRIR LA APLICACION YA QUE ES POR SU SEGURIDAD.");
+                Application.Exit();
+
+            }
+        }
+
+        private void FrmDashboard_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblTiempo.Text = "0";
+        }
+
+        private void Wrapper_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblTiempo.Text = "0";
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblTiempo.Text = "0";
+            if (mouseM)
+            {
+                SetDesktopLocation(MousePosition.X - mouseX, MousePosition.Y - mouseY);
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form mensaje = new FrmPregunta("¿ESTAS SEGURO QUE DESEAS SALIR?");
+            DialogResult resultado = mensaje.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseM = false;
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseX = e.X;
+            mouseY = e.Y;
+            mouseM = true;
+
         }
     }
 }

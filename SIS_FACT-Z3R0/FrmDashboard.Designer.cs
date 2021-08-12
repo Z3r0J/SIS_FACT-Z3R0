@@ -32,6 +32,7 @@ namespace SIS_FACT_Z3R0
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTiempo = new System.Windows.Forms.Label();
             this.pbFlecha = new System.Windows.Forms.PictureBox();
             this.LblHora = new System.Windows.Forms.Label();
             this.btnGanancias = new System.Windows.Forms.Button();
@@ -50,16 +51,21 @@ namespace SIS_FACT_Z3R0
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Wrapper = new System.Windows.Forms.Panel();
+            this.Ayuda = new System.Windows.Forms.ToolTip(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.lblTiempo);
             this.panel1.Controls.Add(this.pbFlecha);
             this.panel1.Controls.Add(this.LblHora);
             this.panel1.Controls.Add(this.btnGanancias);
@@ -78,6 +84,17 @@ namespace SIS_FACT_Z3R0
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 739);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // lblTiempo
+            // 
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTiempo.Location = new System.Drawing.Point(14, 9);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(13, 15);
+            this.lblTiempo.TabIndex = 3;
+            this.lblTiempo.Text = "0";
             // 
             // pbFlecha
             // 
@@ -303,11 +320,16 @@ namespace SIS_FACT_Z3R0
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(180)))), ((int)(((byte)(127)))));
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(221, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1074, 45);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
             // pictureBox2
             // 
@@ -331,24 +353,45 @@ namespace SIS_FACT_Z3R0
             this.Wrapper.Size = new System.Drawing.Size(1074, 694);
             this.Wrapper.TabIndex = 2;
             this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.Wrapper.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Wrapper_MouseMove);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SIS_FACT_Z3R0.Properties.Resources.close;
+            this.pictureBox3.Location = new System.Drawing.Point(947, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 37);
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 737);
+            this.ClientSize = new System.Drawing.Size(1213, 606);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmDashboard";
             this.Text = "FrmDashboard";
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDashboard_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmDashboard_MouseMove);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,5 +417,9 @@ namespace SIS_FACT_Z3R0
         public System.Windows.Forms.Button btnProductos;
         public System.Windows.Forms.Panel Wrapper;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip Ayuda;
+        private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

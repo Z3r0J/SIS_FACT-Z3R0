@@ -18,6 +18,7 @@ namespace SIS_FACT_Z3R0
         DataContext data = new DataContext();
         FrmDashboard frm = new FrmDashboard();
         public static string name,apellido;
+        public static int intentos;
         public FrmLogin()
         {
             InitializeComponent();
@@ -25,12 +26,23 @@ namespace SIS_FACT_Z3R0
             lblKey2.Text = "User: ";
             lblKey3.Text = "Password: ";
             btnUnique.Text = "Entrar";
+
+            this.Ayuda.SetToolTip(this.lblKey2, "Inserta tu usuario ");
+            this.Ayuda.SetToolTip(this.lblKey3, "Inserta tu contraseña ");
+            this.Ayuda.SetToolTip(this.btnUnique, "Has click para entrar ");
+            intentos = 0;
             
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form mensaje = new FrmPregunta("¿ESTAS SEGURO QUE DESEAS SALIR?");
+            DialogResult resultado = mensaje.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,7 +86,15 @@ namespace SIS_FACT_Z3R0
             }
             else
             {
-                FrmError.confirmacionForm("¡Oops, ha ocurrido un error en el sistema intentelo de nuevo más tarde!");
+                intentos = intentos + 1;
+                FrmError.confirmacionForm("¡Oops, usuario y/o contraseña incorrecta!");
+                if (intentos==3)
+                {
+                    FrmError.confirmacionForm("¡Oops!, Haz agotado todos los intentos intentelo de nuevo dentro de 10 segundos.");
+                    intentos = 0;
+                    btnUnique.Enabled = false;
+                    timer1.Start();
+                }
             }
         }
 
@@ -82,6 +102,25 @@ namespace SIS_FACT_Z3R0
         {
             FrmRecuperarPass frm = new FrmRecuperarPass();
             frm.Show();
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacion.CerrarConF10NoF4(e);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            btnUnique.Enabled = true;
+            timer1.Stop();
         }
 
         public DataTable IniciandoSesion(UserClass user)

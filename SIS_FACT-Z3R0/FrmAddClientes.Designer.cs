@@ -29,6 +29,7 @@ namespace SIS_FACT_Z3R0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@ namespace SIS_FACT_Z3R0
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -114,6 +116,7 @@ namespace SIS_FACT_Z3R0
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(142, 23);
             this.txtCedula.TabIndex = 6;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // txtNombre
             // 
@@ -121,6 +124,10 @@ namespace SIS_FACT_Z3R0
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(201, 23);
             this.txtNombre.TabIndex = 7;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // txtApellido
             // 
@@ -128,6 +135,8 @@ namespace SIS_FACT_Z3R0
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(192, 23);
             this.txtApellido.TabIndex = 8;
+            this.txtApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtApellido_KeyDown);
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // textBox3
             // 
@@ -136,6 +145,8 @@ namespace SIS_FACT_Z3R0
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 23);
             this.textBox3.TabIndex = 9;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // button1
             // 
@@ -189,8 +200,10 @@ namespace SIS_FACT_Z3R0
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmAddClientes";
             this.Text = "FrmAddClientes";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAddClientes_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +224,6 @@ namespace SIS_FACT_Z3R0
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ToolTip Ayuda;
     }
 }
