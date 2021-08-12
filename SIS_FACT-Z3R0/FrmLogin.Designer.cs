@@ -29,6 +29,7 @@ namespace SIS_FACT_Z3R0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKey = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@ namespace SIS_FACT_Z3R0
             this.lblKey3 = new System.Windows.Forms.Label();
             this.btnUnique = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Ayuda = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,6 +111,7 @@ namespace SIS_FACT_Z3R0
             this.txtUser.Size = new System.Drawing.Size(187, 36);
             this.txtUser.TabIndex = 2;
             this.txtUser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPassword
             // 
@@ -154,6 +158,11 @@ namespace SIS_FACT_Z3R0
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -167,9 +176,11 @@ namespace SIS_FACT_Z3R0
             this.Controls.Add(this.lblKey2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmLogin";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -190,6 +201,8 @@ namespace SIS_FACT_Z3R0
         private System.Windows.Forms.Label lblKey3;
         private System.Windows.Forms.Button btnUnique;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip Ayuda;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

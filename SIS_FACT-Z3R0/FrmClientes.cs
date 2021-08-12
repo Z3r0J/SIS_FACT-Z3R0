@@ -14,6 +14,9 @@ namespace SIS_FACT_Z3R0
         public FrmClientes()
         {
             InitializeComponent();
+            this.toolTip1.SetToolTip(this.button1, "Has click para añadir un nuevo cliente ");
+            this.toolTip1.SetToolTip(this.textBox1, "Escribe la busqueda que deseas realizar ");
+
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)
@@ -100,6 +103,11 @@ namespace SIS_FACT_Z3R0
             frm.Editar = false;
             MostrarClientes("");
 
+        }
+
+        private void FrmClientes_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacion.CerrarConF10NoF4(e);
         }
     }
 }

@@ -16,6 +16,8 @@ namespace SIS_FACT_Z3R0
         public FrmRecuperarPass()
         {
             InitializeComponent();
+            this.Ayuda.SetToolTip(this.textBox1, "Escribe el correo para restablecer tu contraseña ");
+            this.Ayuda.SetToolTip(this.button1, "Has click para enviar el correo ");
         }
 
         private void FrmRecuperarPass_Load(object sender, EventArgs e)
@@ -51,6 +53,11 @@ namespace SIS_FACT_Z3R0
         public string RecuperandoContraseña(string Usuario_Email)
         {
             return Context.RecuperarContraseña(Usuario_Email);
+        }
+
+        private void FrmRecuperarPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacion.CerrarConF10NoF4(e);
         }
     }
 }

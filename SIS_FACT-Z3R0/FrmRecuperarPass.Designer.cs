@@ -29,12 +29,14 @@ namespace SIS_FACT_Z3R0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblmensaje = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Ayuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +89,7 @@ namespace SIS_FACT_Z3R0
             this.panel1.Controls.Add(this.lblmensaje);
             this.panel1.Location = new System.Drawing.Point(15, 132);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 144);
+            this.panel1.Size = new System.Drawing.Size(585, 144);
             this.panel1.TabIndex = 4;
             // 
             // panel2
@@ -112,9 +114,11 @@ namespace SIS_FACT_Z3R0
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmRecuperarPass";
             this.Text = "FrmRecuperarPass";
             this.Load += new System.EventHandler(this.FrmRecuperarPass_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmRecuperarPass_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -130,5 +134,6 @@ namespace SIS_FACT_Z3R0
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolTip Ayuda;
     }
 }

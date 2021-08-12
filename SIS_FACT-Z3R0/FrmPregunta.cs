@@ -19,6 +19,10 @@ namespace SIS_FACT_Z3R0
             lblMensaje.Text = "¿Quieres Salir?";
             btnOK.Text = "Aceptar";
             btnCancel.Text = "Cancelar";
+
+            this.Ayuda.SetToolTip(this.btnOK, "Has click para aceptar ");
+            this.Ayuda.SetToolTip(this.btnCancel, "Has click para cancelar ");
+
         }
 
         private void FrmPregunta_Load(object sender, EventArgs e)
